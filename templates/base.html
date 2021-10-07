@@ -1,0 +1,128 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Blood Bank</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/doner">Become a Doner</a></li>
+        <li><a href="/donerlist">Doner's List</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="/login"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+{% block content %}
+    <div class="container">
+        <h1 align="center">Blood Bank</h1>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <h2 align="left">Why to donate blood?</h2>
+        <h4 align="left">
+            Safe blood saves lives and improves health. Blood transfusion is needed for:<br>
+            <ul>
+                <li>Women with complications of pregnancy, such as ectopic pregnancies and haemorrhage before, during or after childbirth.</li>
+                <br>
+                <li>Children with severe anaemia often resulting from malaria or malnutrition.</li>
+                <br>
+                <li>People with severe trauma following man-made and natural disasters.</li>
+                <br>
+                <li>Many complex medical and surgical procedures and cancer patients.</li>
+                <br>
+            </ul>
+        </h4>
+        <h3>Click here to
+        <button class="btn btn-danger"><a href="/doner" style="text-decoration: none">Donate</a></button>
+        </h3>
+    </div>
+    <br>
+    <h2 align="center">Who can donate to whom</h2>
+    <div class="container">
+        <table style="width:100%">
+            <tr>
+                <th>If your blood type is:</th>
+                <th>You can give to:</th>
+                <th>You can receiver from:</th>
+            </tr>
+            <tr>
+                <td>O Positive</td>
+                <td>O+, A+, B+, AB+</td>
+                <td>O+, O-</td>
+            </tr>
+            <tr>
+                <td>A Positive</td>
+                <td>A+, AB+</td>
+                <td>A+, B+, O+, O-</td>
+            </tr>
+            <tr>
+                <td>B Positive</td>
+                <td>O+, A+, B+, AB+</td>
+                <td>O+, O-</td>
+            </tr>
+            <tr>
+                <td>AB Positive</td>
+                <td>AB+ Only</td>
+                <td>All Blood Types</td>
+            </tr>
+            <tr>
+                <td>O Negative</td>
+                <td>All Blood Types</td>
+                <td>O- Only</td>
+            </tr>
+            <tr>
+                <td>A Negative</td>
+                <td>A-, A+, AB-, AB+</td>
+                <td>A-, O-</td>
+            </tr>
+            <tr>
+                <td>B Negative</td>
+                <td>B-, B+, ,AB-, AB+</td>
+                <td>B-, O-</td>
+            </tr>
+            <tr>
+                <td>AB Negative</td>
+                <td>AB-, AB+</td>
+                <td>AB-, A-, B-, O-</td>
+            </tr>
+            <br>
+        </table>
+    </div>
+    <br>
+{% endblock content %}
+</body>
+</html>
